@@ -1,5 +1,11 @@
 2008-12-23  Armin Burgmeier  <armin@arbur.net>
 
+	* libinfgtk/inf-gtk-browser-view.c
+	(inf_gtk_browser_view_progress_data_func): Free browser_iter to avoid
+	a memory leak.
+
+2008-12-23  Armin Burgmeier  <armin@arbur.net>
+
 	* infinoted/note-plugins/text/infd-note-plugin-text.c: Renamed the
 	InfdNotePlugin symbol to INFD_NOTE_PLUGIN_TEXT.
 
