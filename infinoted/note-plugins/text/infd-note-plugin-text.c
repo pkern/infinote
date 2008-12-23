@@ -504,7 +504,7 @@ infd_note_plugin_text_session_write(InfdStorage* storage,
   return TRUE;
 }
 
-const InfdNotePlugin INFD_NOTE_PLUGIN = {
+const InfdNotePlugin INFD_NOTE_PLUGIN_TEXT = {
   NULL,
   "InfdFilesystemStorage",
   "InfText",

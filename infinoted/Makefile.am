@@ -11,6 +11,7 @@ infinoted_CPPFLAGS = \
 	-DPLUGIN_PATH=\"${plugin_path}\"
 
 infinoted_LDADD = \
+	${top_builddir}/infinoted/note-plugins/text/libinfd-note-plugin-text.la \
 	${top_builddir}/libinfinity/libinfinity-1.0.la \
 	$(infinoted_LIBS) \
 	$(infinity_LIBS)

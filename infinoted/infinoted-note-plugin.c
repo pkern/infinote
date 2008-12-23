@@ -95,6 +95,10 @@ infinoted_note_plugin_load_directory(const gchar* path,
   gchar* plugin_path;
   gboolean has_plugins;
 
+  /* Load statically linked text plugin */
+  extern const InfdNotePlugin INFD_NOTE_PLUGIN_TEXT;
+  infd_directory_add_plugin(directory, &INFD_NOTE_PLUGIN_TEXT);
+
   error = NULL;
   dir = g_dir_open(path, 0, &error);
   if(dir == NULL)
@@ -107,7 +111,9 @@ infinoted_note_plugin_load_directory(const gchar* path,
   {
     storage = infd_directory_get_storage(directory);
     storage_type = g_type_name(G_TYPE_FROM_INSTANCE(storage));
-    has_plugins = FALSE;
+
+    /* We already loaded the text plugin: */
+    has_plugins = TRUE;
 
     while((filename = g_dir_read_name(dir)) != NULL)
     {

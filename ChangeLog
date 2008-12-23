@@ -1,3 +1,16 @@
+2008-12-23  Armin Burgmeier  <armin@arbur.net>
+
+	* infinoted/note-plugins/text/infd-note-plugin-text.c: Renamed the
+	InfdNotePlugin symbol to INFD_NOTE_PLUGIN_TEXT.
+
+	* infinoted/note-plugins/text/Makefile.am: Build as not-installed
+	library, instead of as a module.
+
+	* infinoted/infinoted-note-plugin.c: Always load statically-linked
+	text plugin.
+
+	* infinoted/Makefile.am: Link against text plugin.
+
 2008-12-22  Armin Burgmeier  <armin@arbur.net>
 
 	* libinfinity/common/inf-io.c (inf_io_event_get_type): Null-terminate
